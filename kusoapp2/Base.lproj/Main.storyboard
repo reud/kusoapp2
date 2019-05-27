@@ -30,24 +30,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlN-Oi-KnN">
-                                <rect key="frame" x="141" y="138" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlN-Oi-KnN">
+                                <rect key="frame" x="141" y="138" width="93" height="30"/>
                                 <state key="normal" title="セグエテスト"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKt-ZW-TFR">
-                                <rect key="frame" x="149" y="210" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKt-ZW-TFR">
+                                <rect key="frame" x="111" y="224" width="153" height="30"/>
+                                <state key="normal" title="セグエ受け渡しテスト"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRS-4U-TaY">
+                                <rect key="frame" x="141" y="186" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="WRS-4U-TaY" firstAttribute="top" secondItem="XlN-Oi-KnN" secondAttribute="bottom" constant="18" id="3bQ-ZN-S6x"/>
+                            <constraint firstItem="WRS-4U-TaY" firstAttribute="leading" secondItem="XlN-Oi-KnN" secondAttribute="leading" id="4Gh-2I-8Qa"/>
+                            <constraint firstItem="NKt-ZW-TFR" firstAttribute="centerX" secondItem="XlN-Oi-KnN" secondAttribute="centerX" id="67E-aJ-tiU"/>
                             <constraint firstItem="wDy-QK-pzq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="8YY-6J-cLM"/>
+                            <constraint firstItem="WRS-4U-TaY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="Cns-ec-4Kh"/>
                             <constraint firstItem="YJm-Ic-DG5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Et7-7l-uhh"/>
+                            <constraint firstItem="WRS-4U-TaY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="186" id="J8a-XL-e6A"/>
+                            <constraint firstItem="NKt-ZW-TFR" firstAttribute="centerX" secondItem="YJm-Ic-DG5" secondAttribute="centerX" id="N11-x4-Mq1"/>
+                            <constraint firstItem="NKt-ZW-TFR" firstAttribute="top" secondItem="WRS-4U-TaY" secondAttribute="bottom" constant="8" symbolic="YES" id="WX8-N4-ec4"/>
                             <constraint firstItem="YJm-Ic-DG5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="29" id="cJ9-lX-nQV"/>
                             <constraint firstAttribute="trailing" secondItem="YJm-Ic-DG5" secondAttribute="trailing" id="h6w-ZA-xZs"/>
                             <constraint firstItem="wDy-QK-pzq" firstAttribute="top" secondItem="YJm-Ic-DG5" secondAttribute="bottom" constant="8" id="rMt-PT-lRq"/>
+                            <constraint firstItem="WRS-4U-TaY" firstAttribute="centerX" secondItem="wDy-QK-pzq" secondAttribute="centerX" id="rxd-sf-IG4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
