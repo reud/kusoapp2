@@ -33,6 +33,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlN-Oi-KnN">
                                 <rect key="frame" x="141" y="138" width="93" height="30"/>
                                 <state key="normal" title="セグエテスト"/>
+                                <connections>
+                                    <segue destination="C4O-m3-49j" kind="presentation" id="3lB-to-xr5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKt-ZW-TFR">
                                 <rect key="frame" x="111" y="224" width="153" height="30"/>
@@ -66,6 +69,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gaq-xs-3pf">
+            <objects>
+                <viewController id="C4O-m3-49j" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tcb-4S-A4b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="43T-zb-o9f"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rl2-28-1tP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="724" y="27"/>
         </scene>
     </scenes>
 </document>
