@@ -40,6 +40,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKt-ZW-TFR">
                                 <rect key="frame" x="111" y="224" width="153" height="30"/>
                                 <state key="normal" title="セグエ受け渡しテスト"/>
+                                <connections>
+                                    <action selector="segueButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IY3-pw-xbP"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRS-4U-TaY">
                                 <rect key="frame" x="141" y="186" width="97" height="30"/>
@@ -66,9 +69,54 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="WRS-4U-TaY" id="n0F-YR-yYf"/>
+                        <segue destination="AfV-tr-o5J" kind="presentation" identifier="segueByCallValue" id="mHP-Kf-ExU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Segue Value View Controller-->
+        <scene sceneID="9lf-P2-xPE">
+            <objects>
+                <viewController id="AfV-tr-o5J" customClass="SegueValueViewController" customModule="kusoapp2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RPl-iU-QFs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="受け渡した値" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw6-wq-OaM">
+                                <rect key="frame" x="16" y="184" width="343" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8J9-1c-bad">
+                                <rect key="frame" x="140" y="363" width="96" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="Js3-a7-Jq9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sw6-wq-OaM" firstAttribute="leading" secondItem="RPl-iU-QFs" secondAttribute="leadingMargin" id="Aat-Cj-eOk"/>
+                            <constraint firstItem="Sw6-wq-OaM" firstAttribute="top" secondItem="2WF-ep-t6f" secondAttribute="top" constant="164" id="GYu-8z-DzK"/>
+                            <constraint firstItem="Sw6-wq-OaM" firstAttribute="trailing" secondItem="RPl-iU-QFs" secondAttribute="trailingMargin" id="KSm-tm-E45"/>
+                            <constraint firstItem="2WF-ep-t6f" firstAttribute="bottom" secondItem="Sw6-wq-OaM" secondAttribute="bottom" constant="420" id="gix-z9-FM1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2WF-ep-t6f"/>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="Sw6-wq-OaM" id="LSF-f2-mvS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Etj-AV-6ad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-844" y="1275"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gaq-xs-3pf">
@@ -106,4 +154,7 @@
             <point key="canvasLocation" x="724" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Js3-a7-Jq9"/>
+    </inferredMetricsTieBreakers>
 </document>
