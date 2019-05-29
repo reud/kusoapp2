@@ -1,0 +1,6 @@
+module Pods_kusoapp2 {
+  umbrella header "Pods-kusoapp2-umbrella.h"
+
+  export *
+  module * { export * }
+}

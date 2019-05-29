@@ -7,6 +7,15 @@
 //
 
 import UIKit
+import SpotifyKit
+fileprivate let application = SpotifyManager.SpotifyDeveloperApplication(
+    clientId:     "169df99f58c94748bd2b818fe997d5b7",
+    clientSecret: "9979b44f61e54728bed3eed5e7a6183b",
+    redirectUri:  "sptest://"
+)
+
+let spotifyManager = SpotifyManager(with:application)
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,10 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        spotifyManager.saveToken(from: url)
+        
         return true
     }
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        return true
+    }
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

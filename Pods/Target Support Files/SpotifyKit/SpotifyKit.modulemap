@@ -1,0 +1,6 @@
+module SpotifyKit {
+  umbrella header "SpotifyKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
